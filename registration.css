@@ -1,0 +1,48 @@
+body {
+    font-family: arial, sans-serif;
+    background: rgb(137, 112, 146);
+    color:rgb(12, 44, 9)
+}
+
+nav {
+    border: 0cap;
+    background-color: rgb(71, 102, 80);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0%;
+
+}
+
+nav a {
+    color: rgb(133, 201, 141);
+    text-decoration: dotted;
+    padding: 0px;
+
+}
+
+nav a:hover {
+    background-color: rgb(154, 100, 160);
+    border-radius: 5px;
+}
+
+header {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 15px 25px;
+
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #133508;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+
+    border: 3px solid #ffe0a3;
+    border-radius: 15px;
+}
+    
+}
