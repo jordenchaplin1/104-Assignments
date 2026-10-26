@@ -22,18 +22,32 @@ const pet3 = {
     breed: "German Shepherd",
 };
 
-function displayPets() {
+function displayRow() {
     const pets = [pet1, pet2, pet3, pet4, pet5, pet6];
-    const container = document.getElementById("petNames");
-    const list = document.createElement("ol");
+    const tableBody = document.getElementById("petTableBody");
 
-    for(const pet of pets) {
-        const listItem = document.createElement('li');
-        listItem.textContent = pet.name;
-        list.appendChild(listItem);
+    // Clear the table before displaying the pets.
+    tableBody.replaceChildren();
+
+    for (const pet of pets) {
+        const row = document.createElement("tr");
+
+        const values = [
+            pet.name,
+            pet.age,
+            pet.gender,
+            pet.service,
+            pet.breed
+        ];
+
+        for (const value of values) {
+            const cell = document.createElement("td");
+            cell.textContent = value;
+            row.appendChild(cell);
+        }
+
+        tableBody.appendChild(row);
     }
-
-    container.replaceChildren(list);
 }
 
 
@@ -71,4 +85,4 @@ const pet6 = new Pet (
 
 )
 
-displayPets();
+displayRow();
